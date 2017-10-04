@@ -28,7 +28,7 @@ In the table, "Berkshire’s Performance vs. the S&P 500"  we can see the perfor
 
 * **[Section 2: Prediction Model - Book Value](Section2_BookValue.ipynb)** — Book value is the net asset value of a company, calculated as total assets minus intangible assets (patents, goodwill) and liabilities. It is also the value at which the asset is carried on a balance sheet and calculated by taking the cost of an asset minus the accumulated depreciation. When compared to the company's market value, book value can indicate whether a stock is under- or overpriced. Since the Book Value fluctuates less than Market Value, the model should be more accurate predicting book value.
 
-* **[Section 3: Word Cloud](WordCloud.ipynb)** — The summary of the analysis can be found here. 
+* **[Section 3: Word Cloud](WordCloud.ipynb)** — The following is a Word CLoud generated from selected annual reports. 
 
 
 ###  Summary of Machine Learning Algorithms
