@@ -2,7 +2,7 @@
 
 ## Using an NLP algorithm on Berkshire Hathway's Annual Report
 
-The goal of this project is to take the words of legendary investor Warren Buffet and try to create a prediction model. We will try to predict the performance of Warren Buffet's company, Berkshire Hathway, by using the words written in the annual report. The main assumption is that within the annual report are conversations about the past, present and future of Berkshire Hathway. For a more accurate prediction model, we could have only used the portion of the annual report that pertains to Berkshire's future but we will use the entire annual report and hope the algorithm can detect all those words that are important. (Click [here](report.pdf) to go straight to report )
+Warren Buffet is arguably the greatest investor of all time. He is so revered among investors and shareholders that his annual stockholders’ meeting is filled up with stadiums of people; all waiting to hear what the chairman has to say. We took that interest in Warren’s words one step further. We will analyze every word that Warren has written in Berkshire’s annual report and try to make future predictions off them. (Click [here](report.pdf) to go straight to report )
 
 Before we can run out prediction algorithms, we must first process the annual reports so that it can be useable by our models. The annual reports will under go the following steps: 
 
@@ -12,12 +12,12 @@ Before we can run out prediction algorithms, we must first process the annual re
 
 * **Step 3:**  Clean the text by removing stop words and stemming other words
 
-We will grab the annual reports from Berkshire's corporate website. Unfortunately, the website only has annual reports dating back to 1977. If our prediction produce usable results, we would further add to the accuracy of the model by adding those missing reports. For the target feature, we will us the "Berkshire’s Performance vs. the S&P 500" table from this year's annual letter to shareholder. We will create both a classification model and a prediction model. The models will attempt to answer the following questions respectively.
+We will grab the annual reports from Berkshire's corporate website. Unfortunately, the website only has annual reports dating back to 1977. If our model produce usable results, we would further add to the accuracy of the model by adding those missing reports. For the target feature, we will us the "Berkshire’s Performance vs. the S&P 500" table from this year's annual letter to shareholder. We will create both a classification model and a prediction model. Once we have created our prediction algorithms, we will take this year’s annual report and predict the year-end stock performance. In particular, we want to answer these two questions: 
 
 1. Will Berkshire Hathway(BRK) Out Perform The S&P 500? (Classification Model)
 2. What is the predicted stock performance of Berkshire? (Regression Model)
 
-The end result of the processing the annual report into a "bag of words" creates a dataset where each word becomes a binary feature of the model. We can use these features without any limitations as to the type of Machine Learning algorithm that could run. Our only issue is that we have more features than we have instances. This is can happen when we are dealing with Natural Language Processing. 
+The end result of processing the annual report into a "bag of words" creates a dataset where each word becomes a binary feature of the model. We can use these features without any limitations as to the type of Machine Learning algorithm that could run. Our only issue is that we have more features than we have instances. This is can happen when we are dealing with Natural Language Processing. 
 
 
 ###  Book Value versus Market Value
@@ -53,7 +53,7 @@ In the table, "Berkshire’s Performance vs. the S&P 500"  we can see the perfor
 * **XgBoost** — XgBoost is one of the most popular models in machine learning. It is also the most powerful implementation of gradient boosting. One of the major advantages of Xgboost besides having high performance and fast execution speed is that you can keep the interpretation of the original problem.  We were unable to do a K-fold cross-validation with our limited computational power.
 
 
-You can also read a [Warren Report](report.pdf) which summarizes the implementation as well as the methodology of the whole project.
+You can also read the [Report](report.pdf), which summarizes the implementation as well as the methodology of the whole project.
 
 
 Even though we are running an Artifical Neural Network with thousands of features, it is not necessary to run the algorithm on a GPU. This is due to the binary nature of the each of the features, which represent whether a word is present or not. Using a GPU to run the Neural Network would, of course, speed things up, but it is not necessary. Instructions to set up the GPU are written below
