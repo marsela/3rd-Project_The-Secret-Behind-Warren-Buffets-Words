@@ -17,7 +17,9 @@ We will grab the annual reports from Berkshire's corporate website. Unfortunatel
 1. Will Berkshire Hathway(BRK) Out Perform The S&P 500? (Classification Model)
 2. What is the predicted stock performance of Berkshire? (Regression Model)
 
-The end result of processing the annual report into a "bag of words" creates a dataset where each word becomes a binary feature of the model. We can use these features without any limitations as to the type of Machine Learning algorithm that could run. Our only issue is that we have more features than we have instances. This is can happen when we are dealing with Natural Language Processing. 
+This analysis was done purely for educational purposes. Our goal was to get familiar with the methodology behind Natural Language Processing. There was no expectation for a model created using the words written in an annual report to have any prediction validity. Though our models did produce results that seem to indicate some value being added by analyzing the words of an annual report, our computational limitation did not allow us to remove overfitting as a possible culprit for model accuracy.
+
+Though it is quite possible that the chairman may use words that seem to indict a more optimistic outlook on the prospects of Berkshire Hathaway, it would still be virtually impossible to use those words to extrapolate a regression model. For a classification model, we would need a near-perfect accuracy rate before we could even begin to assume that modeling the success compared to the S&P 500 is possible. 
 
 
 ###  Book Value versus Market Value
