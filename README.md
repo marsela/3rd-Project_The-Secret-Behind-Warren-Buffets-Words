@@ -2,7 +2,7 @@
 
 ## Using an NLP algorithm on Berkshire Hathway's Annual Report
 
-The goal of this project is to take the words of legendary investor Warren Buffet and try to create a prediction model. We will try to predict the performance of Warren Buffet's company, Berkshire Hathway, by using the words written in the annual report. The main assumption is that within the annual report are conversations about the past, present and future of Berkshire Hathway. For a more accurate prediction model, we could have only used the portion of the annual report that pertains to Berkshire's future but we will use the entire annual report and hope the algorithm can detect all those words that are important.
+The goal of this project is to take the words of legendary investor Warren Buffet and try to create a prediction model. We will try to predict the performance of Warren Buffet's company, Berkshire Hathway, by using the words written in the annual report. The main assumption is that within the annual report are conversations about the past, present and future of Berkshire Hathway. For a more accurate prediction model, we could have only used the portion of the annual report that pertains to Berkshire's future but we will use the entire annual report and hope the algorithm can detect all those words that are important. (Click here to go straight to [Report](report.pdf) )
 
 Before we can run out prediction algorithms, we must first process the annual reports so that it can be useable by our models. The annual reports will under go the following steps: 
 
