@@ -4,7 +4,7 @@
 
 Warren Buffet is arguably the greatest investor of all time. He is so revered among investors and shareholders that his annual stockholders’ meeting is filled up with stadiums of people; all waiting to hear what the chairman has to say. We took that interest in Warren’s words one step further. We will analyze every word that Warren has written in Berkshire’s annual report and try to make future predictions off them. (Click [here](report.pdf) to go straight to report )
 
-Before we can run out prediction algorithms, we must first process the annual reports so that it can be useable by our models. The annual reports will under go the following steps: 
+Before we can run out prediction algorithms, we must first process the annual reports so that it is usable by our models. The annual reports will under go the following steps: 
 
 * **Step 1:**  Scrape Annual Reports from Berkshire Hathaway website
 
@@ -12,14 +12,14 @@ Before we can run out prediction algorithms, we must first process the annual re
 
 * **Step 3:**  Clean the text by removing stop words and stemming other words
 
-We will grab the annual reports from Berkshire's corporate website. Unfortunately, the website only has annual reports dating back to 1977. If our model produce usable results, we would further add to the accuracy of the model by adding those missing reports. For the target feature, we will us the "Berkshire’s Performance vs. the S&P 500" table from this year's annual letter to shareholder. We will create both a classification model and a prediction model. Once we have created our prediction algorithms, we will take this year’s annual report and predict the year-end stock performance. In particular, we want to answer these two questions: 
+We will study the annual reports from Berkshire's corporate website. Unfortunately, this website only has annual reports dating back to 1977. If our model produces usable results, we would further add to the accuracy of the model by adding the missing reports. For the target feature, we will use the "Berkshire’s Performance vs. the S&P 500" table from this year's annual letter to the shareholder. We will create both a classification model and a prediction model. Once we have created our prediction algorithms, we will take this year’s annual report and predict the year-end stock performance. In particular, we want to answer these two questions: 
 
 1. Will Berkshire Hathway(BRK) Out Perform The S&P 500? (Classification Model)
 2. What is the predicted stock performance of Berkshire? (Regression Model)
 
-This analysis was done purely for educational purposes. Our goal was to get familiar with the methodology behind Natural Language Processing. There was no expectation for a model created using the words written in an annual report to have any prediction validity. Though our models did produce results that seem to indicate some value being added by analyzing the words of an annual report, our computational limitation did not allow us to remove overfitting as a possible culprit for model accuracy.
+This analysis was conducted purely for educational purposes. Our goal was to get familiar with the methodology behind Natural Language Processing. There was no expectation for a model created using the words written in an annual report to have any prediction validity. Though our models did produced results that seemed to indicate some value that was added by analyzing the words of an annual report, our computational limitation did not allow us to remove overfitting as a possible culprit for model accuracy.
 
-Though it is quite possible that the chairman may use words that seem to indict a more optimistic outlook on the prospects of Berkshire Hathaway, it would still be virtually impossible to use those words to extrapolate a regression model. For a classification model, we would need a near-perfect accuracy rate before we could even begin to assume that modeling the success compared to the S&P 500 is possible. 
+Though it is quite possible that the chairman may use words that seem to indicate a more optimistic outlook on the prospects of Berkshire Hathaway, it would still be virtually impossible to use those words to extrapolate a regression model. For a classification model, we would need a near-perfect accuracy rate before we could even begin to assume that modeling the success compared to the S&P 500 is possible. 
 
 
 ###  Book Value versus Market Value
@@ -40,7 +40,7 @@ In the table, "Berkshire’s Performance vs. the S&P 500"  we can see the perfor
 * **Linear and Logistic Regression** — We will use the linear and logistic regression as our baseline model for our regression and classification model respectively. 
 
 
-* **Support Vector Regression(SVR)** — We will use a Support Vector Regression to create nonlinear models. Normally we need to scale our features before we can use our Support Vector Regression but since we are working with the "bag of words" all of our features will have a value of 1 or 0 and therefore is already scaled. We will choose a Gaussian kernel for our Support Vector.   
+* **Support Vector Regression(SVR)** — We will use a Support Vector Regression to create nonlinear models. Normally we need to scale our features before we can use our Support Vector Regression but since we are working with the "bag of words" all of our features will have a value of 1 or 0 and therefore already scaled. We will choose a Gaussian kernel for our Support Vector.   
 
 
 * **Naive Bayes** — Naive Bayes Classifiers are a family of simple probabilistic classifier based on applying Bayes' theorem without the requirement of independence assumptions between the features. The components of Bayes theorem; posterior probability, likelihood, prior probability and marginal likelihood are all used. Naive Bayes classifiers are highly scalable, requiring a number of parameters linear in the number of variables (features/predictors) in a learning problem.
@@ -58,7 +58,7 @@ In the table, "Berkshire’s Performance vs. the S&P 500"  we can see the perfor
 You can also read the [Report](report.pdf), which summarizes the implementation as well as the methodology of the whole project.
 
 
-Even though we are running an Artifical Neural Network with thousands of features, it is not necessary to run the algorithm on a GPU. This is due to the binary nature of the each of the features, which represent whether a word is present or not. Using a GPU to run the Neural Network would, of course, speed things up, but it is not necessary. Instructions to set up the GPU are written below
+Even though we are running an Artificial Neural Network with thousands of features, it is not necessary to run the algorithm on a GPU. This is due to the binary nature of the each of the features, which represent whether a word is present or not. Using a GPU to run the Neural Network would, of course, speed things up, but it is not necessary. Instructions to set up the GPU are written below
 
 
 
